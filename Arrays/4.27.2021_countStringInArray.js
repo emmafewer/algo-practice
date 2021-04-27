@@ -21,3 +21,16 @@ function countString(arr, str) {
 
   // As an alternative, I could have joined the array to be one string, then looped through it to see how many
   // times the given string appears.
+
+  function countString2(arr, str) {
+    let count = 0
+    let joinedArray = arr.join("")
+    for (i=0; i<joinedArray.length; i++) {
+      if (joinedArray[i] + joinedArray[i+1] === str) {
+        count++
+      }
+    }
+    return count
+  }
+
+  countString2(["aab", "ccd", "eef", "ghg", "aax", "aataad"], "aa")
